@@ -2,7 +2,7 @@
 import * as vscode from 'vscode';
 import * as colors from "colors";
 import * as shell from "shelljs";
-let nodePath = (shell.which('node').toString());
+const nodePath = (shell.which('node').toString());
 shell.config.execPath = nodePath;
 shell.exec('git');
 
@@ -40,7 +40,7 @@ export const run = async (url:any) => {
   }
 
   // 代码推送
-  const pushCode = async () => {
+  const pushCode = () => {
     shell.exec('git add .');
     shell.exec(`git commit -m ${commit}`);
 

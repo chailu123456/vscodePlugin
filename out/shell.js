@@ -13,7 +13,7 @@ exports.run = void 0;
 const vscode = require("vscode");
 const colors = require("colors");
 const shell = require("shelljs");
-let nodePath = (shell.which('node').toString());
+const nodePath = (shell.which('node').toString());
 shell.config.execPath = nodePath;
 shell.exec('git');
 const run = (url) => __awaiter(void 0, void 0, void 0, function* () {
@@ -51,7 +51,7 @@ const run = (url) => __awaiter(void 0, void 0, void 0, function* () {
             });
         }
         // 代码推送
-        const pushCode = () => __awaiter(void 0, void 0, void 0, function* () {
+        const pushCode = () => {
             shell.exec('git add .');
             shell.exec(`git commit -m ${commit}`);
             try {
@@ -72,7 +72,7 @@ const run = (url) => __awaiter(void 0, void 0, void 0, function* () {
                 vscode.window.showInformationMessage('推送失败,请重新推送');
                 return;
             }
-        });
+        };
         if (buildParmas) {
             buildParmas.then(res => {
                 console.log(colors.green('打包成功'));
