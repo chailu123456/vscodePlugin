@@ -20,7 +20,7 @@ function activate(context) {
         }
         // 获取当前 vscode 所打开的工作区目录地址
         const workspaceFilePath = vscode.workspace.getWorkspaceFolder(activeEditor.document.uri).uri.fsPath;
-        // console.log(workspaceFilePath);
+        console.log(workspaceFilePath);
         let disposable = vscode.commands.registerCommand('quick-push-code.helloWorld', (url) => {
             (0, shell_1.run)(workspaceFilePath);
         });

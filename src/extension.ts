@@ -7,12 +7,11 @@ export async function activate(context: vscode.ExtensionContext) {
 	if (!activeEditor) {
     return;
   }
-    // 获取当前 vscode 所打开的工作区目录地址
-		const workspaceFilePath = vscode.workspace.getWorkspaceFolder(
-			activeEditor.document.uri
-		)!.uri.fsPath;
-		// console.log(workspaceFilePath);
-		
+	// 获取当前 vscode 所打开的工作区目录地址
+	const workspaceFilePath = vscode.workspace.getWorkspaceFolder(
+		activeEditor.document.uri
+	)!.uri.fsPath;
+	console.log(workspaceFilePath);
 	let disposable = vscode.commands.registerCommand('quick-push-code.helloWorld', (url) => {
 		run(workspaceFilePath);
 	});

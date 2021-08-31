@@ -2,7 +2,7 @@
 	"name": "quick-push-code",
 	"displayName": "quick-push-code",
 	"description": "快速推送代码到远程仓库",
-	"version": "1.0.6",
+	"version": "1.0.9",
 	"repository": {
 		"private": true
 	},
