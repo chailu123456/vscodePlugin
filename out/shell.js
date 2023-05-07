@@ -75,7 +75,7 @@ const run = (url) => __awaiter(void 0, void 0, void 0, function* () {
             }
             catch (error) {
                 console.log(colors.red(`推送分支失败: ${error}`));
-                return vscode.window.showWarningMessage('推送失败,请检查代码是否有冲突后重新推送');
+                return vscode.window.showWarningMessage('推送失败,请检查代码是否有冲突后重新推送~~');
             }
         };
         if (buildParmas) {
